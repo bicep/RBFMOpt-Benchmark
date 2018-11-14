@@ -5,7 +5,7 @@ from utils.utils import plot_spline
 
 # where n is the number of times the meta-heuristic algorithms are run to get the mean
 n = 2
-max_fevals = 30
+max_fevals = 100
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
 working_fevals = max_fevals-1
@@ -36,5 +36,12 @@ for i in range(7):
     plt.xlabel('Function evaluations')
     plt.ylabel('Mean hypervolume over '+str(n)+' runs')
     plt.grid()
-    plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Benchmark_Multi' + str(i+1) +'.png')
-    plt.show()
+    plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Graph_DTLZ' + str(i+1) + '.png')
+
+    plt.clf()
+
+    data = [hv_rbfmopt_plot, hv_moead_plot, hv_nsga2_plot]
+    plt.title('DTLZ' + str(i+1))
+    plt.boxplot(data)
+    plt.xticks([1, 2, 3], ['RBFMopt', 'MOEAD', 'NSGAII'])
+    plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Boxplot_DTLZ' + str(i+1) + '.png')
