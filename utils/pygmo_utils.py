@@ -1,20 +1,7 @@
 import pygmo as pg
 import math as math
 import numpy as numpy
-from scipy.interpolate import UnivariateSpline
-
-def plot_spline(plt, x_plot, y_plot, max_fevals, label):
-    spline = UnivariateSpline(x_plot, y_plot, s=5)
-
-    spline_x = numpy.linspace(0, max_fevals, 20)
-    spline = spline(spline_x)
-    plt.plot(spline_x, spline, label=label)
-
-# Weighted Objective Function (Augmented Chebyshev)
-def calculate_weighted_objective(weights, values, rho):
-    weighted_vals = [value * weight for value, weight in zip(values,weights)] 
-    aug_tcheby = max(weighted_vals) + rho * sum(weighted_vals)
-    return aug_tcheby
+from classes.RbfmoptWrapper import RbfmoptWrapper
 
 # Calculates the hypervolume with a changing ref point
 def reconstruct_hv_per_feval(max_fevals, x_list, f_list, hv_pop):
@@ -71,12 +58,31 @@ def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem):
 # Meta-heuristic algorithms are stochastic and need to be run many times.
 # Calculates the hypervolume n times, and then gets the mean across columns
 # to give a 1D mean array
-def calculate_mean(n, algo, max_fevals, pop_size, seed, problem):
+def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem):
 
     # 2D array whose elements are the n arrays of hypervolume
     return_array = []
     for i in range(n):
         return_array.append(get_hv_for_algo(algo, max_fevals, pop_size, seed, problem))
         # Make sure we change the seed each time the algo is being run
-        seed += i
+        seed += (i+1)
+    return numpy.mean(return_array, axis=0)
+
+def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem):
+    return_array = []
+
+    for i in range(n):
+        # Create dictionary for algo settings
+        dict_settings = {
+            'max_evaluations' : max_fevals,
+            'rand_seed': seed,
+        }
+        algo_rbfmopt = RbfmoptWrapper(dict_settings, problem)
+
+        # RBFMopt hypervolume calculations
+        algo_rbfmopt.evolve()
+        empty_pop = pg.population(prob=problem, seed=seed)
+        return_array.append(reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop))
+        # Make sure we change the seed each time the algo is being run
+        seed += (i+1)
     return numpy.mean(return_array, axis=0)
