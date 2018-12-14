@@ -14,7 +14,7 @@ if (len(sys.argv) > 0):
     dim = int(sys.argv[2])
     fdim = int(sys.argv[3])
 
-max_fevals = 100  # (dim+1) * 100
+max_fevals = (dim+1) * 100
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval

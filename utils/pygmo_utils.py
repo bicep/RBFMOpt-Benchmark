@@ -39,7 +39,7 @@ def reconstruct_hv_per_feval_meta(max_fevals, x_list, f_list, hv_pop):
 # Only for the evolutionary algos
 # Stores the f and x values for each generation of the evolutionary algo,
 # Then calculate the hypervolume per function evaluation
-def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, nproblem):
+def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, nproblem, run):
 
     max_gen = math.ceil(max_fevals/pop_size)
 
@@ -55,8 +55,8 @@ def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, nproblem):
         f_list = numpy.concatenate((f_list, pop.get_f()))
         x_list = numpy.concatenate((x_list, pop.get_x()))
 
-    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_x_dtlz' + str(nproblem) + '_run' + str(i+1) + '.txt', x_list.tolist())
-    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_f_dtlz' + str(nproblem) + '_run' + str(i+1) + '.txt', f_list.tolist())
+    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_x_dtlz' + str(nproblem) + '_run' + str(run) + '.txt', x_list.tolist())
+    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_f_dtlz' + str(nproblem) + '_run' + str(run) + '.txt', f_list.tolist())
 
     pop_empty = pg.population(prob=problem, seed=seed)
 
@@ -71,7 +71,7 @@ def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem, nproblem):
     # 2D array whose elements are the n arrays of hypervolume
     return_array = []
     for i in range(n):
-        return_array.append(get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, nproblem))
+        return_array.append(get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, nproblem, (i+1)))
         # Make sure we change the seed each time the algo is being run
         seed += (i+1)
     return numpy.mean(return_array, axis=0)
