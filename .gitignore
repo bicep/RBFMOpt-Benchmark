@@ -4,6 +4,7 @@
 *.sol
 rbfmopt_thomas/
 graphics/
+storedvalues/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
