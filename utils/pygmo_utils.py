@@ -77,7 +77,7 @@ def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem):
     return numpy.mean(return_array, axis=0)
 
 
-def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem):
+def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, ref_freq):
     return_array = []
 
     for i in range(n):
@@ -89,7 +89,7 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem):
 
         var_types = ['R'] * problem.get_nx()
 
-        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, None, 'tchebycheff')
+        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, None, 'tchebycheff', ref_freq)
 
         # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
@@ -98,8 +98,8 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem):
         x_list = np.array(algo_rbfmopt.get_x_list())
         f_list = np.array(algo_rbfmopt.get_f_list())
 
-        save_values('storedvalues/rbfmopt_x_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
-        save_values('storedvalues/rbfmopt_f' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
+        save_values('storedvalues/rbfmopt_x_rf' + str(ref_freq) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
+        save_values('storedvalues/rbfmopt_f_rf' + str(ref_freq) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
 
         return_array.append(reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop))
 

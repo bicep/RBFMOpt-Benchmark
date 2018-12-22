@@ -9,6 +9,7 @@ dim = 6
 fdim = 2
 problem_name = 'dtlz'
 problem_number = 7
+ref_freq = 3
 
 # python benchmark_calc.py 10 6 2
 if (len(sys.argv) > 0):
@@ -40,11 +41,11 @@ for i in range(problem_number):
     algo_nsga2 = pg.algorithm(pg.nsga2(gen=1))
 
     # Hypervolume calculations, mean taken over n number of times
-    hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem)
+    hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, ref_freq)
     hv_moead_plot = calculate_mean_pyg(n, algo_moead, working_fevals, pop_size, seed, problem)
     hv_nsga2_plot = calculate_mean_pyg(n, algo_nsga2, working_fevals, pop_size, seed, problem)
     fevals_plot = range(0, max_fevals)
 
-    save_values('storedvalues/rbfmopt_hv_dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
-    save_values('storedvalues/moead_hv_dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt', hv_moead_plot.tolist())
-    save_values('storedvalues/nsga2_hv_dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt', hv_nsga2_plot.tolist())
+    save_values('storedvalues/rbfmopt_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    save_values('storedvalues/moead_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_moead_plot.tolist())
+    save_values('storedvalues/nsga2_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_nsga2_plot.tolist())
