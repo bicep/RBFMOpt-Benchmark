@@ -2,7 +2,7 @@ import numpy as np
 import pygmo as pg
 import math as math
 import numpy as numpy
-from classes.RbfmoptWrapper import RbfmoptWrapper
+import rbfmopt as rbfmopt
 from utils.utils import save_values
 
 
@@ -87,7 +87,10 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, nproblem):
             'max_evaluations': max_fevals,
             'rand_seed': seed,
         }
-        algo_rbfmopt = RbfmoptWrapper(dict_settings, problem)
+
+        var_types = ['R'] * problem.get_nx()
+
+        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, None, 'tchebycheff')
 
         # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
