@@ -24,9 +24,9 @@ for i in range(problem_number):
 
     problem = pg.problem(problem_function(i+1, param=dim))
 
-    for rf_mult in range(3):
+    for cycle_mult in range(3):
 
-        ref_freq = (rf_mult + 1) * default_rf
-        hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, ref_freq)
+        cycle = (cycle_mult + 1) * default_rf
+        hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle)
 
-        save_values('storedvalues/rbfmopt_hv_rf' + str(ref_freq) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+        save_values('storedvalues/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
