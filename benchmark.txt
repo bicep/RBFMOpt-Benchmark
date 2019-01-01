@@ -1,0 +1,612 @@
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.13   100.00  
+     4      0  GlobalStep                0.000457      0.16   100.00 *
+     5      0  LocalStep                 0.000600      2.06   100.00  
+     6      1  GlobalStep                0.001040      2.09   100.00  
+     7      1  GlobalStep                0.001778      2.13   100.00  
+     8      1  GlobalStep                0.006209      2.16   100.00  
+     9      1  GlobalStep                0.001402      2.19   100.00  
+    10      1  GlobalStep                0.001361      2.22   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.22 tot_time    2.22 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.01   100.00  
+     0      0  Initialization            0.143316      0.01   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.15   100.00  
+     4      0  GlobalStep                0.000457      0.18   100.00 *
+     5      0  LocalStep                 0.000600      2.05   100.00  
+     6      1  GlobalStep                0.001040      2.08   100.00  
+     7      1  GlobalStep                0.001778      2.11   100.00  
+     8      1  GlobalStep                0.006209      2.14   100.00  
+     9      1  GlobalStep                0.001402      2.17   100.00  
+    10      1  GlobalStep                0.001361      2.20   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.20 tot_time    2.20 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.13   100.00  
+     4      0  GlobalStep                0.000457      0.16   100.00 *
+     5      0  LocalStep                 0.000600      1.98   100.00  
+     6      1  GlobalStep                0.001040      2.01   100.00  
+     7      1  GlobalStep                0.001778      2.04   100.00  
+     8      1  GlobalStep                0.006209      2.07   100.00  
+     9      1  GlobalStep                0.001402      2.10   100.00  
+    10      1  GlobalStep                0.001361      2.13   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.13 tot_time    2.13 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.14   100.00  
+     4      0  GlobalStep                0.000461      0.17   100.00 *
+     5      0  LocalStep                 0.000600      2.01   100.00  
+     6      1  GlobalStep                0.004523      2.04   100.00  
+     7      1  GlobalStep                0.001750      2.07   100.00  
+     8      1  GlobalStep                0.005278      2.10   100.00  
+     9      1  GlobalStep                0.002018      2.13   100.00  
+    10      1  GlobalStep                0.001361      2.16   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.16 tot_time    2.16 obj         0.000461 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.10   100.00  
+     3      0  GlobalStep                0.001037      0.13   100.00  
+     4      0  GlobalStep                0.000461      0.16   100.00 *
+     5      0  LocalStep                 0.000600      2.06   100.00  
+     6      1  GlobalStep                0.004523      2.09   100.00  
+     7      1  GlobalStep                0.001750      2.11   100.00  
+     8      1  GlobalStep                0.005278      2.14   100.00  
+     9      1  GlobalStep                0.002018      2.17   100.00  
+    10      1  GlobalStep                0.001361      2.20   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.20 tot_time    2.21 obj         0.000461 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.14   100.00  
+     4      0  GlobalStep                0.000461      0.17   100.00 *
+     5      0  LocalStep                 0.000600      2.00   100.00  
+     6      1  GlobalStep                0.004523      2.02   100.00  
+     7      1  GlobalStep                0.001750      2.05   100.00  
+     8      1  GlobalStep                0.005278      2.08   100.00  
+     9      1  GlobalStep                0.002018      2.11   100.00  
+    10      1  GlobalStep                0.001361      2.14   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.14 tot_time    2.14 obj         0.000461 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.10   100.00  
+     3      0  GlobalStep                0.001037      0.13   100.00  
+     4      0  GlobalStep                0.000457      0.16   100.00 *
+     5      0  LocalStep                 0.000600      1.97   100.00  
+     6      1  GlobalStep                0.001040      2.00   100.00  
+     7      1  GlobalStep                0.001778      2.03   100.00  
+     8      1  GlobalStep                0.006209      2.06   100.00  
+     9      1  GlobalStep                0.001402      2.08   100.00  
+    10      1  GlobalStep                0.001361      2.11   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.11 tot_time    2.11 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.11   100.00  
+     3      0  GlobalStep                0.001037      0.14   100.00  
+     4      0  GlobalStep                0.000457      0.16   100.00 *
+     5      0  LocalStep                 0.000600      2.04   100.00  
+     6      1  GlobalStep                0.001040      2.06   100.00  
+     7      1  GlobalStep                0.001778      2.09   100.00  
+     8      1  GlobalStep                0.006209      2.12   100.00  
+     9      1  GlobalStep                0.001402      2.15   100.00  
+    10      1  GlobalStep                0.001361      2.18   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.18 tot_time    2.18 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.003459      0.05   100.00 *
+     1      0  GlobalStep                0.000583      0.08   100.00 *
+     2      0  GlobalStep                0.011882      0.10   100.00  
+     3      0  GlobalStep                0.001037      0.13   100.00  
+     4      0  GlobalStep                0.000457      0.16   100.00 *
+     5      0  LocalStep                 0.000600      2.00   100.00  
+     6      1  GlobalStep                0.001040      2.03   100.00  
+     7      1  GlobalStep                0.001778      2.06   100.00  
+     8      1  GlobalStep                0.006209      2.08   100.00  
+     9      1  GlobalStep                0.001402      2.11   100.00  
+    10      1  GlobalStep                0.001361      2.14   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.14 tot_time    2.14 obj         0.000457 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.029255      0.05   100.00 *
+     1      0  GlobalStep                0.025547      0.08   100.00 *
+     2      0  GlobalStep                0.025490      0.11   100.00 *
+     3      0  GlobalStep                0.020404      0.13   100.00 *
+     4      0  GlobalStep                0.014277      0.16   100.00 *
+     5      0  LocalStep                 0.022597      2.02   100.00  
+     6      1  GlobalStep                0.028343      2.05   100.00  
+     7      1  GlobalStep                0.024093      2.08   100.00  
+     8      1  GlobalStep                0.023269      2.11   100.00  
+     9      1  GlobalStep                0.010793      2.15   100.00 *
+    10      1  GlobalStep                0.017260      2.18   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.18 tot_time    2.18 obj         0.010793 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.029255      0.06   100.00 *
+     1      0  GlobalStep                0.025547      0.09   100.00 *
+     2      0  GlobalStep                0.025490      0.12   100.00 *
+     3      0  GlobalStep                0.020404      0.15   100.00 *
+     4      0  GlobalStep                0.014277      0.18   100.00 *
+     5      0  LocalStep                 0.022597      2.21   100.00  
+     6      1  GlobalStep                0.028343      2.24   100.00  
+     7      1  GlobalStep                0.024093      2.26   100.00  
+     8      1  GlobalStep                0.023269      2.29   100.00  
+     9      1  GlobalStep                0.010793      2.32   100.00 *
+    10      1  GlobalStep                0.017260      2.35   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.35 tot_time    2.35 obj         0.010793 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.613259      0.02   100.00  
+     0      0  Initialization            0.143316      0.02   100.00  
+     0      0  Initialization            0.746368      0.02   100.00  
+     0      0  Initialization            0.833976      0.02   100.00  
+     0      0  Initialization            0.533905      0.02   100.00  
+     0      0  Initialization            0.714066      0.02   100.00  
+     0      0  Initialization            0.424556      0.02   100.00  
+     0      0  Initialization            0.979124      0.02   100.00  
+     0      0  Initialization            0.047460      0.02   100.00 *
+     0      0  Initialization            0.302393      0.02   100.00  
+     0      0  Initialization            0.191335      0.02   100.00  
+     0      0  GlobalStep                0.029255      0.05   100.00 *
+     1      0  GlobalStep                0.025547      0.09   100.00 *
+     2      0  GlobalStep                0.025490      0.12   100.00 *
+     3      0  GlobalStep                0.020404      0.14   100.00 *
+     4      0  GlobalStep                0.014277      0.17   100.00 *
+     5      0  LocalStep                 0.022597      2.12   100.00  
+     6      1  GlobalStep                0.028343      2.15   100.00  
+     7      1  GlobalStep                0.024093      2.18   100.00  
+     8      1  GlobalStep                0.023269      2.21   100.00  
+     9      1  GlobalStep                0.010793      2.24   100.00 *
+    10      1  GlobalStep                0.017260      2.27   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.27 tot_time    2.27 obj         0.010793 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           22.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           11.000000      0.12   100.00  
+     0      0  Initialization            9.000000      0.12   100.00 *
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           21.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+     0      0  Initialization           13.000000      0.13   100.00  
+     0      0  Initialization           12.000000      0.13   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           12.000000      0.13   100.00  
+     0      0  Initialization           18.000000      0.13   100.00  
+     0      0  Initialization           17.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           14.000000      0.13   100.00  
+     0      0  Initialization           20.000000      0.13   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+     0      0  Initialization           12.000000      0.13   100.00  
+     0      0  Initialization           14.000000      0.13   100.00  
+     0      0  Initialization            9.000000      0.13   100.00  
+     0      0  Initialization           14.000000      0.13   100.00  
+     0      0  Initialization           13.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           18.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           13.000000      0.13   100.00  
+     0      0  Initialization           17.000000      0.13   100.00  
+     0      0  Initialization           17.000000      0.13   100.00  
+     0      0  Initialization           19.000000      0.13   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+     0      0  Initialization           22.000000      0.13   100.00  
+     0      0  Initialization           12.000000      0.13   100.00  
+     0      0  Initialization           15.000000      0.13   100.00  
+Summary: iters   0 evals  76 noisy_evals   0 cycles   0 opt_time    0.13 tot_time    0.13 obj         9.000000 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           22.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           11.000000      0.12   100.00  
+     0      0  Initialization            9.000000      0.12   100.00 *
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           21.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           16.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization            9.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           22.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+Summary: iters   0 evals  76 noisy_evals   0 cycles   0 opt_time    0.12 tot_time    0.13 obj         9.000000 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           22.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           13.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           20.000000      0.11   100.00  
+     0      0  Initialization           13.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           20.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           11.000000      0.11   100.00  
+     0      0  Initialization            9.000000      0.11   100.00 *
+     0      0  Initialization           13.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           20.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           20.000000      0.11   100.00  
+     0      0  Initialization           16.000000      0.11   100.00  
+     0      0  Initialization           16.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           12.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           12.000000      0.11   100.00  
+     0      0  Initialization           21.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           14.000000      0.11   100.00  
+     0      0  Initialization           16.000000      0.11   100.00  
+     0      0  Initialization           16.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           13.000000      0.11   100.00  
+     0      0  Initialization           12.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           15.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           12.000000      0.11   100.00  
+     0      0  Initialization           18.000000      0.11   100.00  
+     0      0  Initialization           17.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.11   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           20.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization            9.000000      0.12   100.00  
+     0      0  Initialization           14.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           18.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           13.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           17.000000      0.12   100.00  
+     0      0  Initialization           19.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+     0      0  Initialization           22.000000      0.12   100.00  
+     0      0  Initialization           12.000000      0.12   100.00  
+     0      0  Initialization           15.000000      0.12   100.00  
+Summary: iters   0 evals  76 noisy_evals   0 cycles   0 opt_time    0.12 tot_time    0.12 obj         9.000000 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.968665      0.02   100.00  
+     0      0  Initialization            0.996627      0.02   100.00  
+     0      0  Initialization            0.950190      0.02   100.00  
+     0      0  Initialization            1.000000      0.02   100.00  
+     0      0  Initialization            0.994678      0.02   100.00  
+     0      0  Initialization            0.987130      0.02   100.00  
+     0      0  Initialization            0.828780      0.02   100.00  
+     0      0  Initialization            0.999937      0.02   100.00  
+     0      0  Initialization            0.813801      0.02   100.00 *
+     0      0  Initialization            0.991679      0.02   100.00  
+     0      0  Initialization            0.996218      0.02   100.00  
+     0      0  GlobalStep                0.999997      0.05   100.00  
+     1      0  GlobalStep                0.999965      0.08   100.00  
+     2      0  GlobalStep                0.998232      0.11   100.00  
+     3      0  GlobalStep                1.000000      0.14   100.00  
+     4      0  GlobalStep                1.000000      0.17   100.00  
+     5      0  LocalStep                 0.999730      2.07   100.00  
+     6      1  GlobalStep                0.429836      2.09   100.00 *
+     7      1  GlobalStep                1.000000      2.12   100.00  
+     8      1  GlobalStep                0.954201      2.15   100.00  
+     9      1  GlobalStep                0.365242      2.18   100.00 *
+    10      1  GlobalStep                0.999944      2.21   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.21 tot_time    2.21 obj         0.365242 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.968665      0.02   100.00  
+     0      0  Initialization            0.996627      0.02   100.00  
+     0      0  Initialization            0.950190      0.02   100.00  
+     0      0  Initialization            1.000000      0.02   100.00  
+     0      0  Initialization            0.994678      0.02   100.00  
+     0      0  Initialization            0.987130      0.02   100.00  
+     0      0  Initialization            0.828780      0.02   100.00  
+     0      0  Initialization            0.999937      0.02   100.00  
+     0      0  Initialization            0.813801      0.02   100.00 *
+     0      0  Initialization            0.991679      0.02   100.00  
+     0      0  Initialization            0.996218      0.02   100.00  
+     0      0  GlobalStep                0.999997      0.05   100.00  
+     1      0  GlobalStep                0.999965      0.08   100.00  
+     2      0  GlobalStep                0.998232      0.11   100.00  
+     3      0  GlobalStep                1.000000      0.14   100.00  
+     4      0  GlobalStep                1.000000      0.17   100.00  
+     5      0  LocalStep                 0.999730      2.00   100.00  
+     6      1  GlobalStep                0.429836      2.03   100.00 *
+     7      1  GlobalStep                1.000000      2.06   100.00  
+     8      1  GlobalStep                0.954201      2.09   100.00  
+     9      1  GlobalStep                0.365242      2.12   100.00 *
+    10      1  GlobalStep                0.999944      2.15   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.15 tot_time    2.15 obj         0.365242 gap 100.00
+  Iter  Cycle  Action             Objective value      Time      Gap
+  ----  -----  ------             ---------------      ----      ---
+     0      0  Initialization            0.968665      0.02   100.00  
+     0      0  Initialization            0.996627      0.02   100.00  
+     0      0  Initialization            0.950190      0.02   100.00  
+     0      0  Initialization            1.000000      0.02   100.00  
+     0      0  Initialization            0.994678      0.02   100.00  
+     0      0  Initialization            0.987130      0.02   100.00  
+     0      0  Initialization            0.828780      0.02   100.00  
+     0      0  Initialization            0.999937      0.02   100.00  
+     0      0  Initialization            0.813801      0.02   100.00 *
+     0      0  Initialization            0.991679      0.02   100.00  
+     0      0  Initialization            0.996218      0.02   100.00  
+     0      0  GlobalStep                0.999997      0.05   100.00  
+     1      0  GlobalStep                0.999965      0.08   100.00  
+     2      0  GlobalStep                0.998232      0.11   100.00  
+     3      0  GlobalStep                1.000000      0.14   100.00  
+     4      0  GlobalStep                1.000000      0.17   100.00  
+     5      0  LocalStep                 0.999730      2.00   100.00  
+     6      1  GlobalStep                0.429836      2.02   100.00 *
+     7      1  GlobalStep                1.000000      2.05   100.00  
+     8      1  GlobalStep                0.954201      2.08   100.00  
+     9      1  GlobalStep                0.365242      2.11   100.00 *
+    10      1  GlobalStep                0.999944      2.14   100.00  
+Summary: iters  11 evals  22 noisy_evals   0 cycles   1 opt_time    2.14 tot_time    2.14 obj         0.365242 gap 100.00

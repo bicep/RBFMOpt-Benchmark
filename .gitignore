@@ -5,6 +5,7 @@
 rbfmopt_thomas/
 graphics/
 storedvalues/
+csv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
