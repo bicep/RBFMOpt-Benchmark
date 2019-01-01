@@ -77,7 +77,7 @@ def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem):
     return numpy.mean(return_array, axis=0)
 
 
-def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle):
+def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, output_stream=None):
     return_array = []
 
     for i in range(n):
@@ -89,7 +89,7 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle):
 
         var_types = ['R'] * problem.get_nx()
 
-        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, None, 'tchebycheff', cycle)
+        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, output_stream, 'tchebycheff', cycle)
 
         # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
