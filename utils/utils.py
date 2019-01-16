@@ -3,7 +3,6 @@ import csv
 import numpy as numpy
 from scipy.interpolate import make_interp_spline
 
-
 def gen_csv(filename, csvfilename):
     with open(filename) as f:
         # open the csv file

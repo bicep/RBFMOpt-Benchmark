@@ -22,7 +22,7 @@ if (len(sys.argv) > 0):
     if (problem_name == 'zdt'):
         problem_number = 6
 
-max_fevals = (dim+1) * 2
+max_fevals = (dim+1) * 20
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
