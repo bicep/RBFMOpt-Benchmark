@@ -13,11 +13,11 @@ default_rf = 3
 
 # i is the problem number chosen
 i = 4
-dim = 6
+dim = 30
 dim2 = 10
 problem_function = getattr(pg.problems, problem_name)
 
-max_fevals = 200
+max_fevals = 202
 
 calc_and_gen_csv(problem_function, n, i, dim, max_fevals, default_rf)
 calc_and_gen_csv(problem_function, n, i, dim2, max_fevals, default_rf)

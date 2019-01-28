@@ -8,7 +8,7 @@ n = 10
 dim = 6
 fdim = 2
 problem_name = 'dtlz'
-problem_number = 7
+problem_number = 1
 cycle = 3
 
 # python benchmark_calc.py 10 6 2
@@ -22,7 +22,7 @@ if (len(sys.argv) > 0):
     if (problem_name == 'zdt'):
         problem_number = 6
 
-max_fevals = (dim+1) * 20
+max_fevals = 200
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
