@@ -3,12 +3,12 @@ from utils.pygmo_utils import calculate_mean_rbf
 from utils.utils import save_values
 
 # where n is the number of times the meta-heuristic algorithms are run to get the mean
-n = 1
-dim = 10
+n = 10
+dim = 30
 problem_name = 'zdt'
 problem_number = 6
 
-max_fevals = (dim+1) * 2
+max_fevals = (dim+1) * 50
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
