@@ -92,7 +92,15 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, outp
         algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, output_stream, 'tchebycheff', cycle)
 
         # RBFMopt hypervolume calculations
+
+
+        start = time.time()
+        # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
+        end = time.time()
+        save_values('timer/rbfmopt_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', (end-start))
+
+
         empty_pop = pg.population(prob=problem, seed=seed)
 
         x_list = np.array(algo_rbfmopt.get_x_list())
