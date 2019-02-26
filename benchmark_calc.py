@@ -46,6 +46,6 @@ for i in range(problem_number):
     hv_nsga2_plot = calculate_mean_pyg(n, algo_nsga2, working_fevals, pop_size, seed, problem)
     fevals_plot = range(0, max_fevals)
 
-    save_values('storedvalues/rbfmopt_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
-    save_values('storedvalues/moead_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_moead_plot.tolist())
-    save_values('storedvalues/nsga2_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_nsga2_plot.tolist())
+    save_values('store_hv/rbfmopt_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    save_values('store_hv/moead_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_moead_plot.tolist())
+    save_values('store_hv/nsga2_hv_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_nsga2_plot.tolist())

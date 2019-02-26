@@ -9,9 +9,9 @@ fevals_plot = range(0, max_fevals)
 # For the 7 dtlz problems
 for i in range(7):
 
-    hv_rbfmopt_plot = load_values('storedvalues/rbfmopt_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_moead_plot = load_values('storedvalues/moead_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_nsga2_plot = load_values('storedvalues/nsga2_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_rbfmopt_plot = load_values('store_hv/rbfmopt_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_moead_plot = load_values('store_hv/moead_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_nsga2_plot = load_values('store_hv/nsga2_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
 
     fig, ax = plt.subplots()
 

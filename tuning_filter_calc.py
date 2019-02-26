@@ -29,9 +29,9 @@ for i in range(problem_number):
     problem = pg.problem(problem_function(i+1, param=dim))
 
     hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, default_rf, max_filter=None)
-    save_values('storedvaluesfilter/rbfmopt_hv_cycle' + str(default_rf) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    save_values('store_hv/rbfmopt_hv_cycle' + str(default_rf) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
 
     for j in range(3):
         hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, default_rf, (j+1)*max_filter*dim)
-        save_values('storedvaluesfilter/rbfmopt_hv_cycle' + str(default_rf) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+        save_values('store_hv/rbfmopt_hv_cycle' + str(default_rf) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
     

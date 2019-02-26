@@ -9,6 +9,11 @@ csv/
 storedvalues2/
 decvar_csv_gen.py
 decvar_csv_plot.py
+store_f/*.txt
+store_x/*.txt
+store_hv/*.txt
+timer/*.txt
+log/*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

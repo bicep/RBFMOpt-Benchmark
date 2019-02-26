@@ -15,9 +15,9 @@ all_hv_9 = []
 # For the 4 zdt problems
 for i in range(4):
 
-    hv_cycle_3 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(3) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_cycle_6 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(6) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_cycle_9 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(9) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_cycle_3 = load_values('store_hv/rbfmopt_hv_' + 'cycle' + str(3) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_cycle_6 = load_values('store_hv/rbfmopt_hv_' + 'cycle' + str(6) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    hv_cycle_9 = load_values('store_hv/rbfmopt_hv_' + 'cycle' + str(9) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
 
     best_hv = max(max(hv_cycle_3), max(hv_cycle_6), max(hv_cycle_9))
     worst_hv = min(min(hv_cycle_3), min(hv_cycle_6), min(hv_cycle_9))

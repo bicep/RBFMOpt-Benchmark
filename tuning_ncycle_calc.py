@@ -28,4 +28,4 @@ for i in range(5,problem_number):
 
     cycle = 9 * default_rf
     hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, None)
-    save_values('storedvalues/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    save_values('store_hv/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())

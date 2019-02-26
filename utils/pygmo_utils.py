@@ -72,8 +72,8 @@ def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, run):
         f_list = numpy.concatenate((f_list, pop.get_f()))
         x_list = numpy.concatenate((x_list, pop.get_x()))
 
-    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_x_' + problem.get_name() + '_run' + str(run) + '.txt', x_list.tolist())
-    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_f_' + problem.get_name() + '_run' + str(run) + '.txt', f_list.tolist())
+    save_values('store_x/' + algo.get_name().split(':')[0] + '_x_' + problem.get_name() + '_run' + str(run) + '.txt', x_list.tolist())
+    save_values('store_f/' + algo.get_name().split(':')[0] + '_f_' + problem.get_name() + '_run' + str(run) + '.txt', f_list.tolist())
 
     pop_empty = pg.population(prob=problem, seed=seed)
 
@@ -123,8 +123,8 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_
         x_list = np.array(algo_rbfmopt.get_x_list())
         f_list = np.array(algo_rbfmopt.get_f_list())
 
-        save_values('storedvalues/rbfmopt_x_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
-        save_values('storedvalues/rbfmopt_f_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
+        save_values('store_x/rbfmopt_x_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
+        save_values('store_f/rbfmopt_f_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
 
         return_array.append(reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop))
 
