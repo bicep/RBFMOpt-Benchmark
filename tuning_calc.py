@@ -3,12 +3,12 @@ from utils.pygmo_utils import calculate_mean_rbf
 from utils.utils import save_values
 
 # where n is the number of times the meta-heuristic algorithms are run to get the mean
-n = 1
-dim = 10
+n = 10
+dim = 30
 problem_name = 'zdt'
 problem_number = 6
 
-max_fevals = (dim+1) * 2
+max_fevals = (dim+1) * 50
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
@@ -19,15 +19,13 @@ seed = 33
 default_rf = 3
 
 # For the each problem in the problem suite
-for i in range(problem_number):
+for i in range(5,problem_number):
     problem_function = getattr(pg.problems, problem_name)
 
     problem = pg.problem(problem_function(i+1, param=dim))
 
-    for cycle_mult in range(3):
+    # for cycle_mult in range(3):
 
-        cycle = (cycle_mult + 1) * default_rf
-
-        hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle)
-
-        save_values('storedvalues/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    cycle = 9 * default_rf
+    hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, None)
+    save_values('storedvalues/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())

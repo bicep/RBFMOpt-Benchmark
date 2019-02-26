@@ -1,6 +1,7 @@
 import numpy as np
 import pygmo as pg
 import math as math
+import time as time
 import numpy as numpy
 import rbfmopt as rbfmopt
 from utils.utils import save_values
@@ -77,7 +78,7 @@ def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem):
     return numpy.mean(return_array, axis=0)
 
 
-def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, output_stream=None):
+def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_filter, output_stream=None):
     return_array = []
 
     for i in range(n):
@@ -89,7 +90,7 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, outp
 
         var_types = ['R'] * problem.get_nx()
 
-        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, output_stream, 'tchebycheff', cycle)
+        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, output_stream, 'tchebycheff', cycle, max_filter)
 
         # RBFMopt hypervolume calculations
 
@@ -98,7 +99,7 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, outp
         # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
         end = time.time()
-        save_values('timer/rbfmopt_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', (end-start))
+        save_values('timer/rbfmopt' + '_filter' + str(max_filter) + '_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', (end-start))
 
 
         empty_pop = pg.population(prob=problem, seed=seed)
