@@ -7,7 +7,7 @@ import rbfmopt as rbfmopt
 from utils.utils import save_values, gen_csv
 
 
-def calc_and_gen_csv(problem_function, n, i, dim, max_fevals, default_rf):
+def calc_and_gen_csv(problem_function, n, i, dim, max_fevals, default_rf, max_filter):
     # i is the problem number chosen
     problem = pg.problem(problem_function(i, param=dim))
 
@@ -15,7 +15,7 @@ def calc_and_gen_csv(problem_function, n, i, dim, max_fevals, default_rf):
 
     file_string = '/Users/rogerko/dev/Opossum/benchmark/csv/benchmark_problem' + str(i) + '_dvar' + str(dim) + '_feval' + str(max_fevals) + '.txt'
     stream = open(file_string, 'a')
-    calculate_mean_rbf(n, max_fevals, working_fevals, 33, problem, default_rf, output_stream=stream)
+    calculate_mean_rbf(n, max_fevals, working_fevals, 33, problem, default_rf, max_filter=max_filter, output_stream=stream)
     stream.close()
 
     csv_file_string = '/Users/rogerko/dev/Opossum/benchmark/csv/benchmark_problem' + str(i) + '_dvar' + str(dim) + '_feval' + str(max_fevals) + '.csv'
@@ -106,25 +106,27 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_
 
         var_types = ['R'] * problem.get_nx()
 
-        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, output_stream, 'tchebycheff', cycle, max_filter)
+        file_string = 'log/rbfmopt_log_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i+1) + '.txt'
+        
+        stream = open(file_string, 'a')
+
+        algo_rbfmopt = rbfmopt.RbfmoptWrapper(dict_settings, problem, var_types, stream, 'tchebycheff', cycle, max_filter)
 
         # RBFMopt hypervolume calculations
-
 
         start = time.time()
         # RBFMopt hypervolume calculations
         algo_rbfmopt.evolve()
         end = time.time()
-        save_values('timer/rbfmopt' + '_filter' + str(max_filter) + '_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', (end-start))
-
+        save_values('timer/rbfmopt_timer_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', (end-start))
 
         empty_pop = pg.population(prob=problem, seed=seed)
 
         x_list = np.array(algo_rbfmopt.get_x_list())
         f_list = np.array(algo_rbfmopt.get_f_list())
 
-        save_values('store_x/rbfmopt_x_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
-        save_values('store_f/rbfmopt_f_cycle' + str(cycle) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
+        save_values('store_x/rbfmopt_x_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
+        save_values('store_f/rbfmopt_f_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
 
         return_array.append(reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop))
 

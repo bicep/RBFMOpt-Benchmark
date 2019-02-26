@@ -8,7 +8,7 @@ dim = 30
 problem_name = 'zdt'
 problem_number = 6
 
-max_fevals = (dim+1) * 50
+max_fevals = (dim + 1) * 50
 
 # To account for the fact that the zero index array in util functions
 # are actually the 1st feval
@@ -19,13 +19,16 @@ seed = 33
 default_rf = 3
 
 # For the each problem in the problem suite
-for i in range(5,problem_number):
+for i in range(5, problem_number):
+    # Skip problem 5
+    if i == 4:
+        continue
+
     problem_function = getattr(pg.problems, problem_name)
 
     problem = pg.problem(problem_function(i+1, param=dim))
 
-    # for cycle_mult in range(3):
-
-    cycle = 9 * default_rf
-    hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, None)
-    save_values('store_hv/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
+    for cycle_mult in range(3):
+        cycle = (cycle_mult+1) * default_rf
+        hv_rbfmopt_plot = calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, None)
+        save_values('store_hv/rbfmopt_hv_cycle' + str(cycle) + '_' + problem.get_name() + '_fevals' + str(max_fevals) + '.txt', hv_rbfmopt_plot.tolist())
