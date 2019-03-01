@@ -75,3 +75,9 @@ def save_values(dir, values):
 def load_values(dir):
     with open(dir, 'r') as filehandle:  
         return json.load(filehandle)
+
+def normalize_helper(x, best, worst):
+    return ((x-worst)/(best-worst))
+
+def normalize(arr, best, worst):
+    return [normalize_helper(x, best, worst) for x in arr]
