@@ -77,7 +77,11 @@ def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, run):
 
     pop_empty = pg.population(prob=problem, seed=seed)
 
-    return reconstruct_hv_per_feval(max_fevals, x_list, f_list, pop_empty)
+    hv_for_run = reconstruct_hv_per_feval(max_fevals, x_list, f_list, pop_empty)
+
+    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_hv_ncycle' + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i) + '.txt', hv_for_run)
+
+    return hv_for_run
 
 
 # Meta-heuristic algorithms are stochastic and need to be run many times.
@@ -94,7 +98,7 @@ def calculate_mean_pyg(n, algo, max_fevals, pop_size, seed, problem):
     return numpy.mean(return_array, axis=0)
 
 
-def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_filter, output_stream=None):
+def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_filter):
     return_array = []
 
     for i in range(n):
