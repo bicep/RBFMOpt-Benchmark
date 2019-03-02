@@ -79,7 +79,7 @@ def get_hv_for_algo(algo, max_fevals, pop_size, seed, problem, run):
 
     hv_for_run = reconstruct_hv_per_feval(max_fevals, x_list, f_list, pop_empty)
 
-    save_values('storedvalues/' + algo.get_name().split(':')[0] + '_hv_ncycle' + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i) + '.txt', hv_for_run)
+    save_values('store_hv/' + algo.get_name().split(':')[0] + '_hv_ncycle' + '_fevals' + str(max_fevals+1) + problem.get_name() + '_run' + str(run) + '.txt', hv_for_run)
 
     return hv_for_run
 
@@ -134,7 +134,7 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_
 
         hv_for_run = reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop)
 
-        save_values('storedvalues/rbfmopt_hv_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i+1) + '.txt', hv_for_run)
+        save_values('store_hv/rbfmopt_hv_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i+1) + '.txt', hv_for_run)
 
         return_array.append(hv_for_run)
 
