@@ -6,6 +6,7 @@ n = 10
 dim = 30
 max_fevals = (dim+1) * 50
 
+
 fevals_plot = range(0, max_fevals)
 
 all_hv_3 = []

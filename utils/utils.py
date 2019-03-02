@@ -49,10 +49,10 @@ def calc_local_step_perfeval(filename):
     return ave
 
 
-def plot_spline(plt, x_plot, y_plot, max_fevals, label):
+def plot_spline(plt, x_plot, y_plot, max_fevals, label, start=0):
     # spline = CubicSpline(x_plot, y_plot)
 
-    spline_x = numpy.linspace(0, max_fevals, 20)
+    spline_x = numpy.linspace(start, max_fevals, 20)
 
     spl = make_interp_spline(x_plot, y_plot, k=3)  # BSpline object
     power_smooth = spl(spline_x)

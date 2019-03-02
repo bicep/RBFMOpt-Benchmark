@@ -128,7 +128,11 @@ def calculate_mean_rbf(n, max_fevals, working_fevals, seed, problem, cycle, max_
         save_values('store_x/rbfmopt_x_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', x_list.tolist())
         save_values('store_f/rbfmopt_f_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + '_' + problem.get_name() + '_run' + str(i+1) + '.txt', f_list.tolist())
 
-        return_array.append(reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop))
+        hv_for_run = reconstruct_hv_per_feval(working_fevals, algo_rbfmopt.get_x_list(), algo_rbfmopt.get_f_list(), empty_pop)
+
+        save_values('storedvalues/rbfmopt_hv_ncycle' + str(cycle) + '_filter' + str(max_filter) + '_fevals' + str(max_fevals) + problem.get_name() + '_run' + str(i+1) + '.txt', hv_for_run)
+
+        return_array.append(hv_for_run)
 
         # Make sure we change the seed each time the algo is being run
         seed += (i+1)
