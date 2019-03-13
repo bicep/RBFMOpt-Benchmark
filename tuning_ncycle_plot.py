@@ -52,7 +52,7 @@ for i in range(6):
         for run in range(n):
             storedvals[x][(i*n)+run] = normalize(storedvals[x][(i*n)+run], maxi, mini)
 
-# calc the mean of the normalized values
+# calc the median of the normalized values
 for x in x_labels:
     median_hv = np.median(storedvals[x], axis=0)
     boxplots.append([i[max_fevals-1] for i in storedvals[x]])

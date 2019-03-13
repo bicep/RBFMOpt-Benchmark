@@ -3,7 +3,6 @@
 *.nl
 *.sol
 rbfmopt_thomas/
-graphics/
 storedvalues/
 csv/
 storedvalues2/

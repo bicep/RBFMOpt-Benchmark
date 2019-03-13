@@ -8,7 +8,7 @@ n = 10
 n_prob = 7
 dim = 30
 n_cycle = 6
-n_filter = 270
+n_filter = 180
 max_fevals = (dim+1) * 50
 
 fevals_plot = range(0, max_fevals)
@@ -64,11 +64,11 @@ plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
 plt.xlabel('Function evaluations')
 plt.ylabel('Median hypervolume over '+str(n)+' runs')
 plt.grid()
-plt.savefig(cwd + '/graphics/benchmark_graph_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/benchmark_graph_median_final' + '.png', dpi=300)
 
 plt.clf()
 
 plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
 plt.boxplot(boxplots)
 plt.xticks([1, 2, 3], ['RBFMopt', 'MOEAD', 'NSGA-II'])
-plt.savefig(cwd + '/graphics/benchmark_boxplot_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/benchmark_boxplot_median_final' + '.png', dpi=300)
