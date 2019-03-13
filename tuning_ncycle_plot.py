@@ -1,64 +1,71 @@
+import math
 import matplotlib.pyplot as plt
 import numpy as np
 from utils.utils import plot_spline, load_values, normalize
 
 n = 10
 dim = 30
+cycle = 3 
 max_fevals = (dim+1) * 50
 
+starting = 150
 
-fevals_plot = range(0, max_fevals)
+fevals_plot = range(starting, max_fevals)
+fig, ax = plt.subplots()
 
-all_hv_3 = []
-all_hv_6 = []
-all_hv_9 = []
+x_labels = [str(3), str(6), str(9)]
+
+storedvals = {
+  str(3): [],
+  str(6): [],
+  str(9): [],
+}
+
+boxplots = []
 
 # For the 4 zdt problems
-for i in range(4):
+for i in range(6):
+
+    problem_number = i+1
 
     if i == 4:
         continue
+    elif i == 5:
+        # Hack because we skip problem 5 but we use problem 5's array index for problem 6
+        i = 4
 
-    hv_cycle_3 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(3) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_cycle_6 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(6) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_cycle_9 = load_values('storedvalues/rbfmopt_hv_' + 'cycle' + str(9) + '_ZDT' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+    maxi = -math.inf
+    mini = math.inf
 
-    best_hv = max(max(hv_cycle_3), max(hv_cycle_6), max(hv_cycle_9))
-    worst_hv = min(min(hv_cycle_3), min(hv_cycle_6), min(hv_cycle_9))
+    for x in x_labels:
+        for run in range(n):
+            storedvals[x].append(load_values('storedvalues/rbfmopt_hv_ncycle' + x + '_filter' + 'None' + '_fevals' + str(max_fevals) + 'ZDT' + str(problem_number) + '_run' + str(run+1) + '.txt'))
 
-    if i == 0:
-        all_hv_3 = [normalize(hv_cycle_3, best_hv, worst_hv)]
-        all_hv_6 = [normalize(hv_cycle_6, best_hv, worst_hv)]
-        all_hv_9 = [normalize(hv_cycle_9, best_hv, worst_hv)]
-    else:
-        all_hv_3 = np.vstack((all_hv_3, normalize(hv_cycle_3, best_hv, worst_hv)))
-        all_hv_6 = np.vstack((all_hv_6, normalize(hv_cycle_6, best_hv, worst_hv)))
-        all_hv_9 = np.vstack((all_hv_9, normalize(hv_cycle_9, best_hv, worst_hv)))
+            # i is the (problem_number -1), get the max and min for the problem
+            maxi = max(max(storedvals[x][(i*n)+run]), maxi)
+            mini = min(min(storedvals[x][(i*n)+run]), mini)
 
+    # normalize and replace original values
+    for x in x_labels:
+        for run in range(n):
+            storedvals[x][(i*n)+run] = normalize(storedvals[x][(i*n)+run], maxi, mini)
 
-mean_hv_3 = np.mean(all_hv_3, axis=0)
-mean_hv_6 = np.mean(all_hv_6, axis=0)
-mean_hv_9 = np.mean(all_hv_9, axis=0)
-
-fig, ax = plt.subplots()
-
-plot_spline(plt, fevals_plot, mean_hv_3, max_fevals, "3 cycles")
-plot_spline(plt, fevals_plot, mean_hv_6, max_fevals, "6 cycles")
-plot_spline(plt, fevals_plot, mean_hv_9, max_fevals, "9 cycles")
+# calc the mean of the normalized values
+for x in x_labels:
+    median_hv = np.median(storedvals[x], axis=0)
+    boxplots.append([i[max_fevals-1] for i in storedvals[x]])
+    plot_spline(plt, fevals_plot, median_hv[starting:], max_fevals, x, starting)
 
 plt.legend(loc='best')
-plt.title('Tuning between 3, 6 and 9 cycles')
+plt.title('Tuning between 3, 6 and 9 ncycles')
 plt.xlabel('Function evaluations')
-plt.ylabel('Mean hypervolume over '+str(n)+' runs')
+plt.ylabel('Median hypervolume over '+str(n)+' runs')
 plt.grid()
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_graph' + '.png')
+plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_ncycle_graph_median' + '.png', dpi=300)
 
 plt.clf()
 
-"""
-data = [mean_hv_3, mean_hv_6, mean_hv_9]
-plt.title('Tuning between 3, 6 and 9 cycles')
-plt.boxplot(data)
-plt.xticks([1, 2, 3], ['3 cycles', '6 cycles', '9 cycles'])
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_boxplot' + '.png')
-"""
+plt.title('Tuning between 3, 6 and 9 ncycles')
+plt.boxplot(boxplots)
+plt.xticks([1, 2, 3], ['3', '6', '9'])
+plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_ncycle_boxplot_median' + '.png', dpi=300)

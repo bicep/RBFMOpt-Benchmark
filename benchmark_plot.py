@@ -1,35 +1,71 @@
+import math
 import matplotlib.pyplot as plt
-from utils.utils import plot_spline, load_values
+import numpy as np
+from utils.utils import plot_spline, load_values, normalize
 
 n = 10
-max_fevals = 100  # (dim+1) * 100
+n_prob = 7
+dim = 30
+n_cycle = 6
+n_filter = 270
+max_fevals = (dim+1) * 50
 
 fevals_plot = range(0, max_fevals)
+fig, ax = plt.subplots()
 
-# For the 7 dtlz problems
-for i in range(7):
+x_labels = ['rbfmopt', 'MOEAD', 'NSGA-II']
 
-    hv_rbfmopt_plot = load_values('store_hv/rbfmopt_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_moead_plot = load_values('store_hv/moead_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
-    hv_nsga2_plot = load_values('store_hv/nsga2_hv_' + 'dtlz' + str(i+1) + '_fevals' + str(max_fevals) + '.txt')
+storedvals = {
+  x_labels[0]: [],
+  x_labels[1]: [],
+  x_labels[2]: [],
+}
 
-    fig, ax = plt.subplots()
+boxplots = []
 
-    plot_spline(plt, fevals_plot, hv_rbfmopt_plot, max_fevals, "rbfmopt")
-    plot_spline(plt, fevals_plot, hv_moead_plot, max_fevals, "moead")
-    plot_spline(plt, fevals_plot, hv_nsga2_plot, max_fevals, "nsga2")
+# For the 4 zdt problems
+for i in range(n_prob):
 
-    plt.legend(loc='best')
-    plt.title('DTLZ' + str(i+1))
-    plt.xlabel('Function evaluations')
-    plt.ylabel('Mean hypervolume over '+str(n)+' runs')
-    plt.grid()
-    plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Graph_DTLZ' + str(i+1) + '.png')
+    problem_number = i+1
 
-    plt.clf()
+    maxi = -math.inf
+    mini = math.inf
 
-    data = [hv_rbfmopt_plot, hv_moead_plot, hv_nsga2_plot]
-    plt.title('DTLZ' + str(i+1))
-    plt.boxplot(data)
-    plt.xticks([1, 2, 3], ['RBFMopt', 'MOEAD', 'NSGAII'])
-    plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Boxplot_DTLZ' + str(i+1) + '.png')
+    for x in x_labels:
+        for run in range(n):
+            if x == x_labels[0]:
+                storedvals[x].append(load_values('store_hv/' + x + '_hv_ncycle' + str(n_cycle) + '_filter' + str(n_filter) + '_fevals' + str(max_fevals) + 'DTLZ' + str(problem_number) + '_run' + str(run+1) + '.txt'))
+            else:
+                storedvals[x].append(load_values('store_hv/' + x + '_hv_ncycle' + '_fevals' + str(max_fevals-1) + 'DTLZ' + str(problem_number) + '_run' + str(run+1) + '.txt'))                
+
+            # i is the (problem_number -1), get the max and min for the problem
+            maxi = max(max(storedvals[x][(i*n)+run]), maxi)
+            mini = min(min(storedvals[x][(i*n)+run]), mini)
+
+    # normalize and replace original values
+    for x in x_labels:
+        for run in range(n):
+            storedvals[x][(i*n)+run] = normalize(storedvals[x][(i*n)+run], maxi, mini)
+
+# calc the mean of the normalized values
+for x in x_labels:
+    median_hv = np.median(storedvals[x], axis=0)
+    boxplots.append([i[max_fevals-1] for i in storedvals[x]])
+    if x == x_labels[0]:
+        x = 'RBFMopt'
+    plot_spline(plt, fevals_plot, median_hv, max_fevals, x)
+
+
+plt.legend(loc='best')
+plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
+plt.xlabel('Function evaluations')
+plt.ylabel('Median hypervolume over '+str(n)+' runs')
+plt.grid()
+plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/benchmark_graph_median' + '.png', dpi=300)
+
+plt.clf()
+
+plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
+plt.boxplot(boxplots)
+plt.xticks([1, 2, 3], ['RBFMopt', 'MOEAD', 'NSGA-II'])
+plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/benchmark_boxplot_median' + '.png', dpi=300)
