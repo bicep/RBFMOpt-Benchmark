@@ -1,3 +1,4 @@
+import os
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -21,6 +22,7 @@ storedvals = {
 }
 
 boxplots = []
+cwd = os.getcwd()
 
 # For the 4 zdt problems
 for i in range(6):
@@ -60,11 +62,11 @@ plt.title('Tuning between 90, 180, 270 and no filter')
 plt.xlabel('Function evaluations')
 plt.ylabel('Median hypervolume over '+str(n)+' runs')
 plt.grid()
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_filter_graph_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/Tuning_filter_graph_median' + '.png', dpi=300)
 
 plt.clf()
 
 plt.title('Tuning between 90, 180, 270 and no filter')
 plt.boxplot(boxplots)
 plt.xticks([1, 2, 3, 4], ['90', '180', '270', 'None'])
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/Tuning_filter_boxplot_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/Tuning_filter_boxplot_median' + '.png', dpi=300)

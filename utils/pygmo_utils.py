@@ -6,23 +6,6 @@ import numpy as numpy
 import rbfmopt as rbfmopt
 from utils.utils import save_values, gen_csv
 
-
-def calc_and_gen_csv(problem_function, n, i, dim, max_fevals, default_rf, max_filter):
-    # i is the problem number chosen
-    problem = pg.problem(problem_function(i, param=dim))
-
-    working_fevals = max_fevals-1
-
-    file_string = '/Users/rogerko/dev/Opossum/benchmark/csv/benchmark_problem' + str(i) + '_dvar' + str(dim) + '_feval' + str(max_fevals) + '.txt'
-    stream = open(file_string, 'a')
-    calculate_mean_rbf(n, max_fevals, working_fevals, 33, problem, default_rf, max_filter=max_filter, output_stream=stream)
-    stream.close()
-
-    csv_file_string = '/Users/rogerko/dev/Opossum/benchmark/csv/benchmark_problem' + str(i) + '_dvar' + str(dim) + '_feval' + str(max_fevals) + '.csv'
-
-    # load the txt file and gen csv
-    gen_csv(file_string, csv_file_string)
-
 # Calculates the hypervolume with a changing ref point
 def reconstruct_hv_per_feval(max_fevals, x_list, f_list, hv_pop):
     # Have the same ref point at the beginning, and compute the starting hypervolume

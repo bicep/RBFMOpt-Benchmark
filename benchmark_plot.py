@@ -1,3 +1,4 @@
+import os
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,6 +23,8 @@ storedvals = {
 }
 
 boxplots = []
+cwd = os.getcwd()
+
 
 # For the 4 zdt problems
 for i in range(n_prob):
@@ -61,11 +64,11 @@ plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
 plt.xlabel('Function evaluations')
 plt.ylabel('Median hypervolume over '+str(n)+' runs')
 plt.grid()
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/benchmark_graph_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/benchmark_graph_median' + '.png', dpi=300)
 
 plt.clf()
 
 plt.title('RBFMopt, NSGA-II and MOEAD for DTLZ Test Problem Suite')
 plt.boxplot(boxplots)
 plt.xticks([1, 2, 3], ['RBFMopt', 'MOEAD', 'NSGA-II'])
-plt.savefig('/Users/rogerko/dev/Opossum/benchmark/graphics/benchmark_boxplot_median' + '.png', dpi=300)
+plt.savefig(cwd + '/graphics/benchmark_boxplot_median' + '.png', dpi=300)
